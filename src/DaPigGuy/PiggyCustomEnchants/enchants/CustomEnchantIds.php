@@ -160,4 +160,6 @@ class CustomEnchantIds
      * Compass
      */
     const RADAR = 700;
+    
+    const LAZER = 1000;
 }
