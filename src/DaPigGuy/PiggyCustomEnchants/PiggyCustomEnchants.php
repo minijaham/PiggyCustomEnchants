@@ -17,6 +17,9 @@ use DaPigGuy\PiggyCustomEnchants\entities\PiggyLightning;
 use DaPigGuy\PiggyCustomEnchants\entities\PiggyTNT;
 use DaPigGuy\PiggyCustomEnchants\entities\PiggyWitherSkull;
 use DaPigGuy\PiggyCustomEnchants\entities\PigProjectile;
+
+use DaPigGuy\PiggyCustomEnchants\entities\PiggySnowball;
+
 use DaPigGuy\PiggyCustomEnchants\tasks\CheckDisabledEnchantsTask;
 use DaPigGuy\PiggyCustomEnchants\tasks\CheckUpdatesTask;
 use DaPigGuy\PiggyCustomEnchants\tasks\TickEnchantmentsTask;
@@ -63,7 +66,7 @@ class PiggyCustomEnchants extends PluginBase
 
         BlockFactory::registerBlock(new PiggyObsidian(), true);
 
-        foreach ([HomingArrow::class, PigProjectile::class, PiggyFireball::class, PiggyWitherSkull::class, PiggyLightning::class, PiggyTNT::class] as $entityClassName) {
+        foreach ([HomingArrow::class, PigProjectile::class, PiggyFireball::class, PiggyWitherSkull::class, PiggyLightning::class, PiggyTNT::class, PiggySnowball::class] as $entityClassName) {
             Entity::registerEntity($entityClassName, true);
         }
 
