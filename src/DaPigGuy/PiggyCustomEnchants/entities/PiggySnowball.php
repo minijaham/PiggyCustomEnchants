@@ -32,7 +32,6 @@ class PiggySnowball extends PiggyProjectile
 
     public function onHitEntity(Entity $entityHit, RayTraceResult $hitResult): void
     {
-        $owner = $this->getOwningEntity();
         $entityHit->getLevel()->addParticle(new DestroyBlockParticle($entityHit->add(0.5, 0.5, 0.5), Block::get(Block::REDSTONE_BLOCK)));
 		
 		    $sound = new PlaySoundPacket();
