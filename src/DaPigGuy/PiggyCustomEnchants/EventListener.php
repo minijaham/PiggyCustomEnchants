@@ -330,6 +330,16 @@ class EventListener implements Listener
     {
         $shooter = $event->getEntity()->getOwningEntity();
         if ($shooter instanceof Player) ReactiveEnchantment::attemptReaction($shooter, $event);
+        
+        $entity = $event->getEntity();
+        if ($shooter instanceof Player && $entity instanceof \DaPigGuy\PiggyCustomEnchants\entities\PiggySnowball) {
+            $x = $entity->getX();
+            $y = $entity->getY();
+            $z = $entity->getZ();
+            $lvl = $entity->getLevel();
+            $block = $lvl->getBlock(new \pocketmine\math\Vector3($shooter->x, $shooter->y - 0.5, $shooter->z));
+            $shooter->useBreakOn($block);
+        }
     }
 
     /**
