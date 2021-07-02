@@ -6,6 +6,7 @@ namespace DaPigGuy\PiggyCustomEnchants\enchants\tools\pickaxe;
 
 use DaPigGuy\PiggyCustomEnchants\enchants\CustomEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\ReactiveEnchantment;
+use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\block\Block;
 use pocketmine\event\Event;
 use pocketmine\inventory\Inventory;
