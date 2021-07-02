@@ -55,7 +55,6 @@ class LazerEnchant extends ReactiveEnchantment
 	    	]),
 	    ]);
 	    $entity = Entity::createEntity("PiggySnowball", $player->getLevel(), $nbt);
-	    $entity->setOwningEntity($player);
 	    $entity->setMotion($entity->getMotion()->multiply(2));
 	    $entity->setCanSaveWithChunk(false);
 	    $entity->spawnToAll();
