@@ -19,11 +19,11 @@ class PiggySnowball extends PiggyProjectile
     const NETWORK_ID = Entity::SNOWBALL;
 
     /** @var float */
-    public $width = 0.2;
+    public $width = 0.01;
     /** @var float */
-    public $length = 0.2;
+    public $length = 0.01;
     /** @var float */
-    public $height = 0.2;
+    public $height = 0.01;
 
     /** @var float */
     protected $drag = 0.01;
@@ -32,16 +32,15 @@ class PiggySnowball extends PiggyProjectile
 
     public function onHitEntity(Entity $entityHit, RayTraceResult $hitResult): void
     {
-        $entityHit->getLevel()->addParticle(new DestroyBlockParticle($entityHit->add(0.5, 0.5, 0.5), Block::get(Block::REDSTONE_BLOCK)));
-		
-		    $sound = new PlaySoundPacket();
-		    $sound->soundName = "random.explode";
-		    $sound->x = $entityHit->getX();
-		    $sound->y = $entityHit->getY();
-		    $sound->z = $entityHit->getZ();
-		    $sound->volume = 2;
-		    $sound->pitch = 1;
-		    Server::getInstance()->broadcastPacket($entityHit->getLevel()->getPlayers(), $sound);
+        // $entityHit->getLevel()->addParticle(new DestroyBlockParticle($entityHit->add(0.5, 0.5, 0.5), Block::get(Block::REDSTONE_BLOCK)));
+	$sound = new PlaySoundPacket();
+	$sound->soundName = "random.explode";
+	$sound->x = $entityHit->getX();
+	$sound->y = $entityHit->getY();
+	$sound->z = $entityHit->getZ();
+	$sound->volume = 2;
+	$sound->pitch = 1;
+	Server::getInstance()->broadcastPacket($entityHit->getLevel()->getPlayers(), $sound);
         parent::onHitEntity($entityHit, $hitResult);
     }
 }
