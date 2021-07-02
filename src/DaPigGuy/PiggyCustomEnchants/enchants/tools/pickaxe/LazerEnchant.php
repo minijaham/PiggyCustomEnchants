@@ -12,6 +12,12 @@ use pocketmine\event\Event;
 use pocketmine\inventory\Inventory;
 use pocketmine\item\Item;
 use pocketmine\Player;
+use pocketmine\nbt\tag\{
+	CompoundTag,
+	DoubleTag,
+	ListTag,
+	FloatTag
+};
 
 class LazerEnchant extends ReactiveEnchantment
 {
