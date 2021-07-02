@@ -50,6 +50,9 @@ use DaPigGuy\PiggyCustomEnchants\enchants\tools\hoe\FarmerEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\tools\hoe\FertilizerEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\tools\hoe\HarvestEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\tools\pickaxe\JackpotEnchant;
+
+use DaPigGuy\PiggyCustomEnchants\enchants\tools\pickaxe\LazerEnchant;
+
 use DaPigGuy\PiggyCustomEnchants\enchants\tools\QuickeningEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\tools\SmeltingEnchant;
 use DaPigGuy\PiggyCustomEnchants\enchants\tools\TelepathyEnchant;
@@ -139,6 +142,8 @@ class CustomEnchantManager
         self::registerEnchantment(new ToggleableEffectEnchant($plugin, CustomEnchantIds::OXYGENATE, "Oxygenate", 1, CustomEnchant::TYPE_HAND, CustomEnchant::ITEM_TYPE_PICKAXE, Effect::WATER_BREATHING, 0, 0, CustomEnchant::RARITY_UNCOMMON));
         self::registerEnchantment(new ToggleableEffectEnchant($plugin, CustomEnchantIds::SPRINGS, "Springs", 1, CustomEnchant::TYPE_BOOTS, CustomEnchant::ITEM_TYPE_BOOTS, Effect::JUMP_BOOST, 3, 0, CustomEnchant::RARITY_UNCOMMON));
 
+        self::registerEnchantment(new LazerEnchant($plugin, CustomEnchantIds::LAZERENCHANT));
+        
         self::registerEnchantment(new AntiKnockbackEnchant($plugin, CustomEnchantIds::ANTIKNOCKBACK));
         self::registerEnchantment(new AntitoxinEnchant($plugin, CustomEnchantIds::ANTITOXIN));
         self::registerEnchantment(new AutoAimEnchant($plugin, CustomEnchantIds::AUTOAIM));
