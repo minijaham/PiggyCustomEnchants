@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace minijaham\Pets\entities;
+namespace DaPigGuy\PiggyCustomEnchants\entities;
 
 use DaPigGuy\PiggyCustomEnchants\utils\AllyChecks;
 use pocketmine\block\Block;
