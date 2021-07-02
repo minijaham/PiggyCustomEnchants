@@ -11,6 +11,7 @@ use pocketmine\block\Block;
 use pocketmine\event\Event;
 use pocketmine\inventory\Inventory;
 use pocketmine\item\Item;
+use pocketmine\entity\Entity;
 use pocketmine\Player;
 use pocketmine\nbt\tag\{
 	CompoundTag,
